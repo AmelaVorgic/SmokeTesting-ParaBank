@@ -23,4 +23,5 @@ This code has initialized Cypress and following:
   - updating contact info
   - welcome page
 - custom command for login
+
 ...and default files required for Cypress to work
