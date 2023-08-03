@@ -63,7 +63,7 @@ describe('Smoke test for updating user info', () => {
             .should('be.visible')
     })
 
-    it('Given that user wants to delete his last name while updating info and save it with no name entered, according error should be displayed.', () => {
+    it('Given that user wants to delete his last name while updating info and save it with no last name entered, according error should be displayed.', () => {
         const firstName = faker.name.firstName()
         const address = faker.address.streetName()
         const city = faker.address.city()
@@ -82,7 +82,7 @@ describe('Smoke test for updating user info', () => {
     })
 
 
-    it('Given that user wants to delete his address while updating info and save it with no name entered, according error should be displayed.', () => {
+    it('Given that user wants to delete his address while updating info and save it with no address entered, according error should be displayed.', () => {
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const city = faker.address.city()
@@ -100,7 +100,7 @@ describe('Smoke test for updating user info', () => {
             .should('be.visible')
     })
 
-    it('Given that user wants to delete his city while updating info and save it with no name entered, according error should be displayed.', () => {
+    it('Given that user wants to delete his city while updating info and save it with no city entered, according error should be displayed.', () => {
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
@@ -118,7 +118,7 @@ describe('Smoke test for updating user info', () => {
             .should('be.visible')
     })
 
-    it('Given that user wants to delete his state while updating info and save it with no name entered, according error should be displayed.', () => {
+    it('Given that user wants to delete his state while updating info and save it with no state entered, according error should be displayed.', () => {
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
@@ -136,7 +136,7 @@ describe('Smoke test for updating user info', () => {
             .should('be.visible')
     })
 
-    it('Given that user wants to delete his zip code while updating info and save it with no name entered, according error should be displayed.', () => {
+    it('Given that user wants to delete his zip code while updating info and save it with no zip code entered, according error should be displayed.', () => {
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()

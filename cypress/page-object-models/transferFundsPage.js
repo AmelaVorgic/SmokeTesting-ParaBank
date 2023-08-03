@@ -12,6 +12,7 @@ export class transferFundsPage {
     }
   
     inputAmount(amount) {
+      this.elements.amountInputField().click()
       this.elements.amountInputField().type(amount)
     }
 

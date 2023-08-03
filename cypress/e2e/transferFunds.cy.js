@@ -21,4 +21,15 @@ it('Given that user wants to transfer funds within accounts, when form is submit
     .and('contain', 'See Account Activity for more details.')
   })
 
+  it('Given that user wants to transfer funds within accounts, when form is submitted, success message is displayed', () => {
+    navigation.selectTransferFunds()
+    transferFundsPage.inputAmount('100')
+    transferFundsPage.transfer()
+    transferFundsPage.elements.transferSuccessfullMessage()
+    .should('be.visible')
+    .and('contain', 'Transfer Complete!')
+    .and('contain', '100')
+    .and('contain', 'See Account Activity for more details.')
+  })
+
  })
