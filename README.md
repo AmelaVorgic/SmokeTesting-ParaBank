@@ -12,6 +12,7 @@ This code has initialized Cypress and following:
   - registration
   - transfering funds
   - updating info
+  - find transactions
 - page object models for:
   - accounts overview
   - bill payment
@@ -22,6 +23,7 @@ This code has initialized Cypress and following:
   - transfering funds
   - updating contact info
   - welcome page
+  - find transactions
 - custom command for login
 
 ...and default files required for Cypress to work
