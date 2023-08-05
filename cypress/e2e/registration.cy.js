@@ -23,10 +23,10 @@ describe('Smoke test for registration', () => {
     registrationForm.confirmPassword('password')
     registrationForm.submitRegistrationData()
     cy.url()
-    .should('include', '/register')
-     welcomePage.elements.welcomeMessage()
-     .should('be.visible')
-     .and('contain', 'Your account was created successfully. You are now logged in.')
+      .should('include', '/register')
+    welcomePage.elements.welcomeMessage()
+      .should('be.visible')
+      .and('contain', 'Your account was created successfully. You are now logged in.')
   })
 
   it('Given that user wants to create an account, he can create it without submitting phone number in form', () => {
@@ -43,10 +43,10 @@ describe('Smoke test for registration', () => {
     registrationForm.confirmPassword('password')
     registrationForm.submitRegistrationData()
     cy.url()
-    .should('include', '/register')
-     welcomePage.elements.welcomeMessage()
-     .should('be.visible')
-     .and('contain', 'Your account was created successfully. You are now logged in.')
+      .should('include', '/register')
+    welcomePage.elements.welcomeMessage()
+      .should('be.visible')
+      .and('contain', 'Your account was created successfully. You are now logged in.')
   })
 
   it('Given that user wants to create an account with already taken username, according error displays', () => {

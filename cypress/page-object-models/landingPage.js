@@ -7,7 +7,6 @@ export class landingPage {
     loginForm: () => cy.get('form'),
     usernameInputField: () => cy.get('input[name="username"]'),
     passwordInputField: () => cy.get('input[name="password"]'),
-   // loginButton: () => cy.get('input[value="Log In"]'),
     loginButton: () => cy.get('input[type="submit"]'),
     error: () => cy.get('.error'),
     forgotPassword: () => cy.contains('Forgot login info?'),

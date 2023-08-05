@@ -1,6 +1,7 @@
 export class updateContactInfoPage {
 
     elements = {
+        title: () => cy.get('.title'),
         firstNameInputField: () => cy.get('input[name="customer.firstName"]'),
         lastNameInputField: () => cy.get('input[name="customer.lastName"]'),
         addressInputField: () => cy.get('input[name="customer.address.street"]'),

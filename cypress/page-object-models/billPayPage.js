@@ -1,7 +1,7 @@
 export class accountsOverviewPage {
 
     elements = {
-        billPaymentTitle: () => cy.get('div.ng-scope[ng-app="OverviewAccountsApp"][ng-controller="OverviewAccountsCtrl"]'),
+        title: () => cy.get('.title'),
         payeeNameInputField: () => cy.get('input[name="payee.name"]'),
         addressInputField: () => cy.get('input[name="payee.address.street"]'),
         cityInputField: () => cy.get('input[name="payee.address.city"]'),
@@ -17,14 +17,14 @@ export class accountsOverviewPage {
 
     submitBillPayment() {
         this.elements.sendButton().click()
-      }
+    }
 
     inputPayeeName(payeename) {
         this.elements.payeeNameInputField().click()
         this.elements.payeeNameInputField().type(payeename)
-      }
+    }
 
-      inputAddress(address) {
+    inputAddress(address) {
         this.elements.addressInputField().click()
         this.elements.addressInputField().type(address)
     }

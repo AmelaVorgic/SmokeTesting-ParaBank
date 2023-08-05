@@ -4,13 +4,28 @@ import navigation from "../page-object-models/navigation"
 
 
 describe('Smoke test for updating user info', () => {
-    
+
     beforeEach(() => {
         cy.login()
-        navigation.selectUpdateContactInfo()        
+    })
+
+    it('Given that user enters the page via URL, according content will be displayed', () => {
+        cy.visit('https://parabank.parasoft.com/parabank/updateprofile.htm')
+        updateContactInfoPage.elements.title()
+            .should('be.visible')
+            .and('contain', 'Update Profile')
+    })
+
+    it('Given that user enters the page via navigation, according content will be displayed', () => {
+        navigation.selectUpdateContactInfo()
+        cy.url().should('include', '/updateprofile.htm')
+        updateContactInfoPage.elements.title()
+            .should('be.visible')
+            .and('contain', 'Update Profile')
     })
 
     it('Given that user wants to update all info, he can update it via update info form.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
@@ -29,6 +44,7 @@ describe('Smoke test for updating user info', () => {
     })
 
     it('Given that user wants to update his info, he can leave phone number field empty.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
@@ -46,6 +62,7 @@ describe('Smoke test for updating user info', () => {
     })
 
     it('Given that user wants to delete his first name while updating info and save it with no name entered, according error should be displayed.', () => {
+        navigation.selectUpdateContactInfo()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
         const city = faker.address.city()
@@ -64,6 +81,7 @@ describe('Smoke test for updating user info', () => {
     })
 
     it('Given that user wants to delete his last name while updating info and save it with no last name entered, according error should be displayed.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const address = faker.address.streetName()
         const city = faker.address.city()
@@ -83,6 +101,7 @@ describe('Smoke test for updating user info', () => {
 
 
     it('Given that user wants to delete his address while updating info and save it with no address entered, according error should be displayed.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const city = faker.address.city()
@@ -101,6 +120,7 @@ describe('Smoke test for updating user info', () => {
     })
 
     it('Given that user wants to delete his city while updating info and save it with no city entered, according error should be displayed.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
@@ -119,6 +139,7 @@ describe('Smoke test for updating user info', () => {
     })
 
     it('Given that user wants to delete his state while updating info and save it with no state entered, according error should be displayed.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
@@ -137,6 +158,7 @@ describe('Smoke test for updating user info', () => {
     })
 
     it('Given that user wants to delete his zip code while updating info and save it with no zip code entered, according error should be displayed.', () => {
+        navigation.selectUpdateContactInfo()
         const firstName = faker.name.firstName()
         const lastName = faker.name.lastName()
         const address = faker.address.streetName()
