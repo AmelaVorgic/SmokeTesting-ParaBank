@@ -37,3 +37,5 @@ To start tests:
 5. Run command ``` npx cypress open``` to open Cypress driven browser
  - here you may encounter "No version of Cypress is installed" error and to install Cypress run ``` npx npx cypress install```
  - if installation was successful, repeat step 5.
+
+Test cases can be found [here.](https://docs.google.com/spreadsheets/d/1vRys9legbtDTN7nfSkJmuhq5o__mNCG4/edit?usp=sharing&ouid=113057789906459352068&rtpof=true&sd=true)
