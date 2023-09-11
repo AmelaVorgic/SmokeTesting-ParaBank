@@ -40,6 +40,7 @@ describe('Smoke test for updating user info', () => {
         updateContactInfoPage.inputState(state)
         updateContactInfoPage.inputZipCode(zipCode)
         updateContactInfoPage.inputPhoneNo(phone)
+        updateContactInfoPage.submitUpdateData()
         updateContactInfoPage.elements.successMessage().should('be.visible')
     })
 
@@ -58,6 +59,7 @@ describe('Smoke test for updating user info', () => {
         updateContactInfoPage.inputState(state)
         updateContactInfoPage.inputZipCode(zipCode)
         updateContactInfoPage.elements.phoneNoInputField().clear()
+        updateContactInfoPage.submitUpdateData()
         updateContactInfoPage.elements.successMessage().should('be.visible')
     })
 
